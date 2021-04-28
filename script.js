@@ -4,7 +4,9 @@
 //when we click start//
 var startButton = document.getElementById("start-btn");
 var questContEle = document.getElementById("question-container");
-
+var questEle = document.getElementById("question");
+var answerButtonEle = document.getElementById("answer-buttons");
+var questList;
 startButton.addEventListener("click", startGame);
 
 function startGame() {
@@ -14,10 +16,16 @@ function startGame() {
 
   //show the questions when start button hidden
   questContEle.classList.remove("hide");
-  setNextQuestion;
+  setNextQuestion();
 }
 //when we click "next"
-function setNextQuestion() {}
+function setNextQuestion() {
+  showQuestion(questList);
+}
+
+function showQuestion(question) {
+  questEle.innerText = question.question;
+}
 
 function selectAnswer() {}
 
