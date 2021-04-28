@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: fantasy;
+}
+
+body {
+  /*  */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(9, 12, 184);
+}
+/* Setting a color for the correct answer */
+body.correct {
+  background-color: rgb(24, 195, 67);
+}
+
+body.wrong {
+  background-color: rgb(214, 16, 56);
+}
+/* stlye the question box */
+.container {
+  width: 300px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
+}
+/* structure the buttons inside the box */
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.btn {
+  background-color: tomato;
+  border: 1px solid black;
+  border-radius: 5px 10px;
+  color: rgb(43, 83, 214);
+  outline: none;
+}
+
+.btn:hover {
+  border-color: black;
+}
+/* set color for correct answer */
+.btn.correct {
+  background-color: rgb(24, 195, 67);
+}
+/* set color for wrong answer */
+.btn.wrong {
+  background-color: rgb(214, 16, 56);
+}
+/* style start and next button */
+.start-btn,
+.next-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
